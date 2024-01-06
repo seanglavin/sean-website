@@ -1,0 +1,38 @@
+:root {
+    --primary-light: #f5f5f5;
+    --secondary-blue-light: #043049;
+    --secondary-blue-dark: #032a42;
+    --accent-color: #ff5a5f;
+    --accent-color-2: #42b983;
+    --primary-dark: #021927;
+    --secondary-dark: #232323;
+}
+
+
+/* Get new fonts later. might need to use woff or woff2 format */
+/* @font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    src: local("Roboto"), url("./public/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+} */
+
+/* @font-face {
+    font-family: "IBMPlexMono";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    src: local("IBMPlexMono"), url("./public/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf") format("truetype");
+} */
+
+/* body {
+    color: var(--primary-light);
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
