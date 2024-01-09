@@ -1,6 +1,6 @@
 <template>
   <HeaderComp />
-  <div class="router-view-container">
+  <div class="router-view-container flex-1 relative">
     <router-view />
   </div>
   <FooterComp />
@@ -21,8 +21,7 @@ export default {
 <style>
 #app {
   min-height: 100vh;
-  min-width: 320px;
-  font-family: "IBMPlexMono", "Roboto", Avenir, Helvetica, Arial, sans-serif;
+  min-width: 375px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -38,10 +37,10 @@ export default {
   position: relative;
 }
 
-.router-view-container {
+/* .router-view-container {
   flex: 1;
   padding: 10px;
   position: relative;
   overflow: hidden;
-}
+} */
 </style>

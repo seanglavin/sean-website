@@ -1,16 +1,18 @@
 <template>
   <div class="my-cat">
     <h1>This is a page for my cat, Girl!</h1>
-    <ImageCarouselComp folder="images/cats" />
+    <div class="image-carousel-container">
+      <CatImageCarouselComp />
+    </div>
   </div>
 </template>
 
 <script>
-import ImageCarouselComp from '@/components/ImageCarouselComp.vue'
+import CatImageCarouselComp from '@/components/CatImageCarouselComp.vue'
 
 export default {
   components: {
-    ImageCarouselComp
+    CatImageCarouselComp
   }
 }
 </script>

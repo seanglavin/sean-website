@@ -1,6 +1,6 @@
 <template>
   <button
-    class="block w-full rounded bg-accentColor px-12 py-3 text-sm font-bold shadow hover:bg-accentColor2 focus:outline-none focus:ring sm:w-auto"
+    class="button"
     @click="handleClick">
     <slot>{{ buttonText }}</slot>
   </button>
@@ -49,10 +49,7 @@ export default {
 
 <style scoped>
 .button {
-  @apply inline-block px-4 py-2 bg-red-500 text-white rounded cursor-pointer transition duration-300 ease-in-out
+  @apply block m-3 w-full font-bold px-12 py-3 bg-accentColor rounded cursor-pointer hover:bg-accentColor2
 }
 
-.button:hover {
-  @apply bg-red-600;
-}
 </style>

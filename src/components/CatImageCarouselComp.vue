@@ -2,7 +2,7 @@
   <div>
     <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
       <Slide v-for="(image, index) in catImages" :key="index">
-        <img :src="image" alt="Cat Image" />
+        <img :src="image" alt="Cat Image" class="object-cover w-full h-64"/>
       </Slide>
     </Carousel>
 
@@ -15,7 +15,7 @@
     >
       <Slide v-for="(image, index) in catImages" :key="index">
         <div class="thumbnail-item" @click="slideTo(index)">
-          <img :src="image" alt="Cat Thumbnail" />
+          <img :src="image" alt="Cat Thumbnail" class="object-cover w-full h-16"/>
         </div>
       </Slide>
     </Carousel>

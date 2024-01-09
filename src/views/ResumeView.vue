@@ -1,15 +1,12 @@
 <template>
   <div class="resume">
-    <div class="min-h-screen flex flex-col items-center justify-top">
-      <div class="text-center">
-        <h1 class="text-xl text-accentColor underline font-extrabold sm:text-4xl p-5">Work Experience</h1>
-      </div>
+      <h1 class="page-title">Work Experience</h1>
       <div class="card-container">
         <BasicCardComp v-for="(experience, index) in experiences" :key="index" :title="experience.title"
         :subtitle="experience.company" :body="experience.summary" />
       </div>
-      <ButtonComp buttonText="Download PDF" />
-    </div>
+      <ButtonComp class="button" buttonText="Download PDF" />
+    <!-- </div> -->
   </div>
 </template>
 
@@ -30,3 +27,19 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.resume {
+  @apply flex-col mx-3
+}
+
+/* page title css */
+.page-title {
+  @apply text-2xl text-accentColor underline font-extrabold sm:text-5xl p-5
+}
+
+.button {
+  @apply mt-6 sm:w-auto mx-auto
+}
+</style>
