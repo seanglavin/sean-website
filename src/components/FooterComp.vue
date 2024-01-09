@@ -18,7 +18,7 @@ export default {
     return {
       footerLinks: [
         {
-          text: 'Email Link',
+          text: 'skglavin@gmail.com',
           url: 'https://www.youtube.com/watch?v=KxGRhd_iWuE',
           target: '_blank',
           rel: 'noopener'

@@ -12,8 +12,10 @@
         </h1>
 
         <p class="body">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-          numquam ea!
+          Please take a look around and feel free to contact me!
+        </p>
+        <p class="body">
+          This site is a work in progress and will be ever evolving.
         </p>
       </div>
     </div>
