@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .top-bar {
-  @apply bg-secondaryBlueDark p-5
+  @apply bg-secondaryBlueDark p-5 w-full
 }
 .top-bar-nav {
   @apply flex items-center justify-center gap-2

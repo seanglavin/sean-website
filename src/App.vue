@@ -35,9 +35,10 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  /* align-items: center; */
 }
 
 .router-view-container {
-  @apply flex-1 relative
+  @apply flex-1
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="my-cat">
-    <h1>This is a page for my cat, Girl!</h1>
+    <h1 class="page-title">This is Girl!</h1>
     <div class="image-carousel-container">
       <CatImageCarouselComp />
     </div>
@@ -18,5 +18,14 @@ export default {
 </script>
 
 <style scoped>
-/* Add any styles specific to your view */
+.my-cat {
+  @apply flex flex-col px-3;
+  align-items: center;
+}
+.page-title {
+  @apply text-2xl text-accentColor underline font-extrabold sm:text-5xl p-5
+}
+.image-carousel-container {
+  align-items: center;
+}
 </style>

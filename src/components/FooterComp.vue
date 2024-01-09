@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .bot-bar {
-  @apply bg-secondaryBlueDark p-3
+  @apply bg-secondaryBlueDark p-3 w-full
 }
 .bot-bar-links {
   @apply flex items-center justify-center list-none gap-2 m-0

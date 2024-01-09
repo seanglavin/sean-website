@@ -1,25 +1,21 @@
 <template>
-  <div>
-    <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
-      <Slide v-for="(image, index) in catImages" :key="index">
-        <img :src="image" alt="Cat Image" class="object-cover w-full h-64"/>
-      </Slide>
-    </Carousel>
+    <div class="gallery-container">
+      <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
+        <Slide v-for="(image, index) in catImages" :key="index">
+          <img :src="image" alt="Cat Image" class="gallery-image" />
+        </Slide>
+      </Carousel>
+    </div>
 
-    <Carousel
-      id="thumbnails"
-      :items-to-show="4"
-      :wrap-around="true"
-      v-model="currentSlide"
-      ref="carousel"
-    >
-      <Slide v-for="(image, index) in catImages" :key="index">
-        <div class="thumbnail-item" @click="slideTo(index)">
-          <img :src="image" alt="Cat Thumbnail" class="object-cover w-full h-16"/>
-        </div>
-      </Slide>
-    </Carousel>
-  </div>
+    <div class="thumbnail-container">
+      <Carousel id="thumbnails" :items-to-show="5" :wrap-around="false" v-model="currentSlide" ref="carousel">
+        <Slide v-for="(image, index) in catImages" :key="index">
+          <div class="thumbnail-item" @click="slideTo(index)">
+            <img :src="image" alt="Cat Thumbnail" class="thumbnail-image" />
+          </div>
+        </Slide>
+      </Carousel>
+    </div>
 </template>
 
 <script>
@@ -57,3 +53,27 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.gallery-container {
+  @apply p-3 mb-2;
+  @apply bg-black rounded-xl bg-opacity-20;
+  width: 325px;
+  height: 325px;
+}
+.gallery-image {
+  @apply aspect-square object-cover rounded-xl;
+  width: 300px;
+  height: 300px;
+}
+.thumbnail-container {
+  @apply p-3;
+  @apply bg-black rounded-xl bg-opacity-20;
+  width: 325px;
+}
+.thumbnail-image {
+  @apply aspect-square object-cover rounded-xl;
+  width: 55px;
+  height: 55px;
+}
+</style>
