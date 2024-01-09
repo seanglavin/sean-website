@@ -1,7 +1,7 @@
 <template>
-  <footer class="bot-bar bg-secondaryBlueDark p-6">
-    <ul class="bot-bar-links flex items-center justify-center list-none gap-2 m-0">
-      <li class="footer-link list-none text-accentColor2" v-for="(link, index) in footerLinks" :key="index">
+  <footer class="bot-bar">
+    <ul class="bot-bar-links">
+      <li class="footer-link" v-for="(link, index) in footerLinks" :key="index">
         <a :href="link.url" :target="link.target" :rel="link.rel">
           {{ link.text }}
         </a>
@@ -40,3 +40,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bot-bar {
+  @apply bg-secondaryBlueDark p-3
+}
+.bot-bar-links {
+  @apply flex items-center justify-center list-none gap-2 m-0
+}
+.footer-link {
+  @apply list-none text-accentColor2
+}
+</style>

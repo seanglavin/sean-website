@@ -1,12 +1,11 @@
 <template>
-  <header class="top-bar bg-secondaryBlueDark p-7">
-    <nav class="top-bar-nav flex items-center justify-center gap-2">
+  <header class="top-bar">
+    <nav class="top-bar-nav">
       <!-- Add nav icons later! -->
-      <!-- <i class="icon-home"></i> -->
-      <router-link class="nav-bar-link font-bold text-primaryLight hover:text-accentColor"
+      <router-link class="nav-bar-link"
         v-for="(link, index) in headerLinks" :key="index" :to="link.to">
         <span>{{ link.text }}</span>
-        <!-- add a | between each link -->
+        <!-- adds a | between each link -->
         <span v-if="index < headerLinks.length - 1" class="text-primaryLight"> | </span>
       </router-link>
     </nav>
@@ -45,6 +44,15 @@ export default {
 </script>
 
 <style scoped>
+.top-bar {
+  @apply bg-secondaryBlueDark p-5
+}
+.top-bar-nav {
+  @apply flex items-center justify-center gap-2
+}
+.nav-bar-link {
+  @apply font-bold text-primaryLight hover:text-accentColor
+}
 .nav-bar-link.router-link-active {
   @apply text-accentColor
 }

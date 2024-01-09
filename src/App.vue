@@ -1,6 +1,6 @@
 <template>
   <HeaderComp />
-  <div class="router-view-container flex-1 relative">
+  <div class="router-view-container">
     <router-view />
   </div>
   <FooterComp />
@@ -37,10 +37,7 @@ export default {
   position: relative;
 }
 
-/* .router-view-container {
-  flex: 1;
-  padding: 10px;
-  position: relative;
-  overflow: hidden;
-} */
+.router-view-container {
+  @apply flex-1 relative
+}
 </style>

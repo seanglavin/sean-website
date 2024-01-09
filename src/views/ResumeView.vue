@@ -40,6 +40,6 @@ export default {
 }
 
 .button {
-  @apply mt-6 sm:w-auto mx-auto
+  @apply mt-8 sm:w-auto mx-auto
 }
 </style>

@@ -15,10 +15,10 @@ export default {
   }
 }
 </script>
-s
+
 <style scoped>
 .card {
-  @apply mt-4 pt-4 px-2 pb-2 text-left sm:max-w-lg mx-auto;
+  @apply mt-4 p-4 text-left sm:max-w-lg mx-auto;
   @apply bg-black rounded-xl bg-opacity-20;
 }
 .card-title {
