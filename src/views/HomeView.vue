@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import HeroLeft from '@/components/HeroLeft.vue'
-
-export default {
-  components: {
-    HeroLeft
-  }
-}
 </script>
