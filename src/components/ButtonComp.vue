@@ -4,45 +4,41 @@
   </button>
 </template>
 
-<script>
-export default {
-  props: {
-    buttonText: String,
-    routePath: String // Specify the route if you want the button to navigate to a page
-  },
-  methods: {
-    handleClick() {
-      if (this.routePath) {
-        this.routeTo()
-      } else {
-        this.downloadResumePDF()
-      }
-    },
-    routeTo() {
-      this.$router.push(this.routePath) // Route to the specified page
-    },
-    async downloadResumePDF() {
-      try {
-        const _filename = 'SeanGlavinResume.pdf'
-        const pdfPath = import.meta.env.BASE_URL + _filename
+<script setup>
+import { useRouter } from 'vue-router'
 
-        const link = document.createElement('a')
+const props = defineProps({
+  buttonText: String,
+  routePath: String,
+})
 
-        link.href = pdfPath
+const router = useRouter()
 
-        link.download = 'downloaded-file-' + _filename
+function handleClick() {
+  if (props.routePath) {
+    router.push(props.routePath)
+  } else {
+    downloadResumePDF()
+  }
+}
 
-        link.click()
+async function downloadResumePDF() {
+  try {
+    const _filename = 'SeanGlavinResume.pdf'
+    const pdfPath = import.meta.env.BASE_URL + _filename
 
-        if (document.body.contains(link)) {
-          document.body.removeChild(link);
-        }
+    const link = document.createElement('a')
+    link.href = pdfPath
+    link.download = 'downloaded-file-' + _filename
+    link.click()
 
-        window.URL.revokeObjectURL(link.href);
-      } catch (error) {
-        console.error('Error downloading PDF:', error)
-      }
+    if (document.body.contains(link)) {
+      document.body.removeChild(link)
     }
+
+    window.URL.revokeObjectURL(link.href)
+  } catch (error) {
+    console.error('Error downloading PDF:', error)
   }
 }
 </script>
