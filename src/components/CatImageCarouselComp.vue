@@ -18,40 +18,30 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import { ref, onMounted } from 'vue'
 import { Carousel, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
-export default defineComponent({
-  name: 'Gallery',
-  components: {
-    Carousel,
-    Slide,
-  },
-  data: () => ({
-    currentSlide: 0,
-    catImages: [], // Array to store cat images filenames
-  }),
-  created() {
-    this.loadCatImages();
-  },
-  methods: {
-    slideTo(index) {
-      this.currentSlide = index;
-    },
-    async loadCatImages() {
-      const imagesContext = import.meta.glob('@/assets/images/cats/*.jpg');
-      const imagePaths = await Promise.all(
-        Object.values(imagesContext).map(async (importImage) => {
-          const { default: imagePath } = await importImage();
-          return imagePath;
-        })
-      );
-      this.catImages = imagePaths;
-    },
-  },
-});
+const currentSlide = ref(0)
+const catImages = ref([])
+
+function slideTo(index) {
+  currentSlide.value = index
+}
+
+async function loadCatImages() {
+  const imagesContext = import.meta.glob('@/assets/images/cats/*.jpg')
+  const imagePaths = await Promise.all(
+    Object.values(imagesContext).map(async (importImage) => {
+      const { default: imagePath } = await importImage()
+      return imagePath
+    })
+  )
+  catImages.value = imagePaths
+}
+
+onMounted(() => loadCatImages())
 </script>
 
 <style scoped>
