@@ -7,25 +7,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import CatImageCarouselComp from '@/components/CatImageCarouselComp.vue'
-
-export default {
-  components: {
-    CatImageCarouselComp
-  }
-}
 </script>
 
 <style scoped>
 .my-cat {
-  @apply flex flex-col px-3;
-  align-items: center;
+  @apply flex flex-col items-center px-3;
 }
 .page-title {
   @apply text-2xl text-accentColor underline font-extrabold sm:text-5xl p-5
 }
 .image-carousel-container {
-  align-items: center;
+  @apply flex flex-col items-center justify-center;
 }
 </style>
