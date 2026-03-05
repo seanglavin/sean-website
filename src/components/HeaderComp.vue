@@ -1,6 +1,6 @@
 <template>
   <header class="top-bar">
-    <nav class="top-bar-nav">
+    <nav class="top-bar-nav" aria-label="Main navigation">
       <!-- Add nav icons later! -->
       <router-link class="nav-bar-link"
         v-for="(link, index) in headerLinks" :key="index" :to="link.to">

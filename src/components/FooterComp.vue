@@ -15,8 +15,8 @@
 <script setup>
 const footerLinks = [
   { text: 'skglavin@gmail.com', url: 'mailto:skglavin@gmail.com' },
-  { text: 'LinkedIn', url: 'https://www.linkedin.com/in/skglavin/', target: '_blank', rel: 'noopener' },
-  { text: 'Github', url: 'https://github.com/seanglavin', target: '_blank', rel: 'noopener' },
+  { text: 'LinkedIn', url: 'https://www.linkedin.com/in/skglavin/', target: '_blank', rel: 'noopener noreferrer' },
+  { text: 'Github', url: 'https://github.com/seanglavin', target: '_blank', rel: 'noopener noreferrer' },
 ]
 </script>
 

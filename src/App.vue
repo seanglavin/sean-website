@@ -1,8 +1,8 @@
 <template>
   <HeaderComp />
-  <div class="router-view-container">
+  <main class="router-view-container">
     <router-view />
-  </div>
+  </main>
   <FooterComp />
 </template>
 

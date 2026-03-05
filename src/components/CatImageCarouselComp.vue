@@ -2,7 +2,7 @@
     <div class="gallery-container">
       <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
         <Slide v-for="(image, index) in catImages" :key="index">
-          <img :src="image" alt="Cat Image" class="gallery-image" />
+          <img :src="image" :alt="`Photo of Girl the cat ${index + 1}`" class="gallery-image" />
         </Slide>
       </Carousel>
     </div>
@@ -11,7 +11,7 @@
       <Carousel id="thumbnails" :items-to-show="5" :wrap-around="false" v-model="currentSlide" ref="carousel">
         <Slide v-for="(image, index) in catImages" :key="index">
           <div class="thumbnail-item" @click="slideTo(index)">
-            <img :src="image" alt="Cat Thumbnail" class="thumbnail-image" />
+            <img :src="image" :alt="`Photo of Girl the cat ${index + 1}`" class="thumbnail-image" />
           </div>
         </Slide>
       </Carousel>
