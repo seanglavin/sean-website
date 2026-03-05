@@ -46,24 +46,15 @@ onMounted(() => loadCatImages())
 
 <style scoped>
 .gallery-container {
-  @apply p-3 mb-2;
-  @apply bg-black rounded-xl bg-opacity-20;
-  width: 325px;
-  height: 325px;
+  @apply p-3 mb-2 w-full max-w-sm bg-black rounded-xl bg-opacity-20;
 }
 .gallery-image {
-  @apply aspect-square object-cover rounded-xl;
-  width: 300px;
-  height: 300px;
+  @apply aspect-square object-cover rounded-xl w-full h-auto;
 }
 .thumbnail-container {
-  @apply p-3;
-  @apply bg-black rounded-xl bg-opacity-20;
-  width: 325px;
+  @apply p-3 w-full max-w-sm bg-black rounded-xl bg-opacity-20;
 }
 .thumbnail-image {
-  @apply aspect-square object-cover rounded-xl;
-  width: 55px;
-  height: 55px;
+  @apply aspect-square object-cover rounded-xl w-14 h-14;
 }
 </style>
