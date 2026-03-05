@@ -6,7 +6,6 @@
         :subtitle="experience.company" :body="experience.summary" />
       </div>
       <ButtonComp class="button" buttonText="Download PDF" />
-    <!-- </div> -->
   </div>
 </template>
 

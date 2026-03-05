@@ -19,9 +19,7 @@ export default {
       footerLinks: [
         {
           text: 'skglavin@gmail.com',
-          url: 'https://www.youtube.com/watch?v=KxGRhd_iWuE',
-          target: '_blank',
-          rel: 'noopener'
+          url: 'mailto:skglavin@gmail.com',
         },
         {
           text: 'LinkedIn',
