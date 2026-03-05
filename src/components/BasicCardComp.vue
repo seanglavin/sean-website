@@ -6,14 +6,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    title: String,
-    subtitle: String,
-    body: String
-  }
-}
+<script setup>
+defineProps({
+  title: String,
+  subtitle: String,
+  body: String,
+})
 </script>
 
 <style scoped>
