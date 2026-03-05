@@ -12,35 +12,13 @@
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      headerLinks: [
-        {
-          text: 'Home',
-          to: '/'
-        },
-        {
-          text: 'About',
-          to: '/about'
-        },
-        {
-          text: 'My Cat',
-          to: '/mycat'
-        },
-        {
-          text: 'Resume',
-          to: '/resume'
-        }
-        // {
-        //   text: 'Blog',
-        //   to: '/blog'
-        // }
-      ]
-    }
-  }
-}
+<script setup>
+const headerLinks = [
+  { text: 'Home', to: '/' },
+  { text: 'About', to: '/about' },
+  { text: 'My Cat', to: '/mycat' },
+  { text: 'Resume', to: '/resume' },
+]
 </script>
 
 <style scoped>
