@@ -5,7 +5,7 @@
         <BasicCardComp v-for="(experience, index) in experiences" :key="index" :title="experience.title"
         :subtitle="experience.company" :body="experience.summary" />
       </div>
-      <ButtonComp class="button" buttonText="Download PDF" />
+      <ButtonComp class="button" buttonText="Download PDF" :download-pdf="true" />
   </div>
 </template>
 

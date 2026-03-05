@@ -9,30 +9,6 @@
 }
 
 
-/* Get new fonts later. might need to use woff or woff2 format */
-/* @font-face {
-    font-family: "Roboto";
-    font-weight: 400;
-    font-style: normal;
-    font-display: auto;
-    src: local("Roboto"), url("./public/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-} */
-
-/* @font-face {
-    font-family: "IBMPlexMono";
-    font-weight: 400;
-    font-style: normal;
-    font-display: auto;
-    src: local("IBMPlexMono"), url("./public/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf") format("truetype");
-} */
-
-/* body {
-    color: var(--primary-light);
-} */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */

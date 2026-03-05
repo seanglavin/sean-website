@@ -10,6 +10,7 @@ import { useRouter } from 'vue-router'
 const props = defineProps({
   buttonText: String,
   routePath: String,
+  downloadPdf: { type: Boolean, default: false },
 })
 
 const router = useRouter()
@@ -17,7 +18,7 @@ const router = useRouter()
 function handleClick() {
   if (props.routePath) {
     router.push(props.routePath)
-  } else {
+  } else if (props.downloadPdf) {
     downloadResumePDF()
   }
 }
