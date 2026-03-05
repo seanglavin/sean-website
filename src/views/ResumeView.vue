@@ -9,22 +9,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ButtonComp from '@/components/ButtonComp.vue'
 import BasicCardComp from '@/components/BasicCardComp.vue'
 import jsonData from '@/assets/text/work-experience-summaries.json'
 
-export default {
-  components: {
-    ButtonComp,
-    BasicCardComp
-  },
-  data() {
-    return {
-      experiences: jsonData.experience
-    }
-  }
-}
+const experiences = jsonData.experience
 </script>
 
 <style scoped>
