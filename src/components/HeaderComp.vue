@@ -18,7 +18,7 @@ const headerLinks = [
   { text: 'About', to: '/about' },
   { text: 'My Cat', to: '/mycat' },
   { text: 'Komatsu-le', to: '/komatsu-le' },
-  <!-- { text: 'Resume', to: '/resume' }, --->
+  // { text: 'Resume', to: '/resume' },
 ]
 </script>
 
