@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import MyCatView from '../views/MyCatView.vue'
 import ResumeView from '../views/ResumeView.vue'
+import KomatsuWordlePage from '../views/KomatsuWordlePage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/mycat',
       name: 'mycat',
       component: MyCatView
+    },
+    {
+      path: '/komatsu-le',
+      name: 'KomatsuWordle',
+      component: KomatsuWordlePage
     },
     {
       path: '/resume',
