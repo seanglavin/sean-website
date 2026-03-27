@@ -1,6 +1,92 @@
 <template>
   <div class="mtg-game">
     <h1 class="game-title">MTG Art Game</h1>
+
+    <!-- TAB BAR -->
+    <div class="tab-bar">
+      <button
+        class="tab-btn"
+        :class="{ active: activeTab === 'game' }"
+        @click="activeTab = 'game'"
+      >Game</button>
+      <button
+        class="tab-btn"
+        :class="{ active: activeTab === 'stats' }"
+        @click="activeTab = 'stats'"
+      >Stats</button>
+    </div>
+
+    <!-- STATS TAB -->
+    <div v-if="activeTab === 'stats'">
+      <div v-if="!stats" class="status-msg">Loading stats…</div>
+      <div v-else class="stats-panel">
+        <p class="stats-meta">
+          {{ stats.total_cards.toLocaleString() }} eligible cards &mdash;
+          data from {{ new Date(stats.generated_at).toLocaleDateString() }}
+        </p>
+
+        <h3 class="stats-heading">Color Identity</h3>
+        <div class="bar-chart">
+          <div v-for="[label, key, cls] in colorRows" :key="key" class="bar-row">
+            <span class="bar-label">{{ label }}</span>
+            <div class="bar-track">
+              <div
+                class="bar-fill"
+                :class="cls"
+                :style="{ width: pct(stats.color_distribution[key], colorMax) }"
+              ></div>
+            </div>
+            <span class="bar-value">{{ stats.color_distribution[key].toLocaleString() }}</span>
+          </div>
+        </div>
+
+        <h3 class="stats-heading">Card Type</h3>
+        <div class="bar-chart">
+          <div v-for="[label, key] in typeRows" :key="key" class="bar-row">
+            <span class="bar-label">{{ label }}</span>
+            <div class="bar-track">
+              <div
+                class="bar-fill bar-type"
+                :style="{ width: pct(stats.type_distribution[key], typeMax) }"
+              ></div>
+            </div>
+            <span class="bar-value">{{ stats.type_distribution[key].toLocaleString() }}</span>
+          </div>
+        </div>
+
+        <h3 class="stats-heading">Rarity</h3>
+        <div class="bar-chart">
+          <div v-for="[label, key, cls] in rarityRows" :key="key" class="bar-row">
+            <span class="bar-label">{{ label }}</span>
+            <div class="bar-track">
+              <div
+                class="bar-fill"
+                :class="cls"
+                :style="{ width: pct(stats.rarity_distribution[key], rarityMax) }"
+              ></div>
+            </div>
+            <span class="bar-value">{{ stats.rarity_distribution[key].toLocaleString() }}</span>
+          </div>
+        </div>
+
+        <h3 class="stats-heading">Top Sets by Card Count</h3>
+        <div class="bar-chart">
+          <div v-for="s in stats.top_sets" :key="s.set_code" class="bar-row">
+            <span class="bar-label bar-label--set" :title="s.set_name">{{ s.set_code.toUpperCase() }}</span>
+            <div class="bar-track">
+              <div
+                class="bar-fill bar-type"
+                :style="{ width: pct(s.count, stats.top_sets[0].count) }"
+              ></div>
+            </div>
+            <span class="bar-value">{{ s.count.toLocaleString() }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAME TAB -->
+    <div v-else>
     <p class="game-subtitle">Drag each card name onto its art.</p>
 
     <!-- LOADING DATA -->
@@ -143,11 +229,48 @@
         <button class="btn btn-primary btn-centered" @click="playAgain">Play again</button>
       </div>
     </div>
+    </div><!-- end game tab -->
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+
+const activeTab = ref('game')
+const stats = ref(null)
+
+const colorRows = [
+  ['White', 'W', 'bar-white'],
+  ['Blue',  'U', 'bar-blue'],
+  ['Black', 'B', 'bar-black'],
+  ['Red',   'R', 'bar-red'],
+  ['Green', 'G', 'bar-green'],
+  ['Colorless', 'C', 'bar-colorless'],
+]
+const typeRows = [
+  ['Creature', 'Creature'],
+  ['Instant', 'Instant'],
+  ['Sorcery', 'Sorcery'],
+  ['Enchantment', 'Enchantment'],
+  ['Artifact', 'Artifact'],
+  ['Land', 'Land'],
+  ['Planeswalker', 'Planeswalker'],
+]
+const rarityRows = [
+  ['Common',   'common',   'bar-common'],
+  ['Uncommon', 'uncommon', 'bar-uncommon'],
+  ['Rare',     'rare',     'bar-rare'],
+  ['Mythic',   'mythic',   'bar-mythic'],
+]
+
+const colorMax  = computed(() => stats.value ? Math.max(...Object.values(stats.value.color_distribution)) : 1)
+const typeMax   = computed(() => stats.value ? Math.max(...Object.values(stats.value.type_distribution)) : 1)
+const rarityMax = computed(() => stats.value ? Math.max(...Object.values(stats.value.rarity_distribution)) : 1)
+
+function pct(value, max) {
+  if (!max) return '0%'
+  return Math.round((value / max) * 100) + '%'
+}
 
 const phase = ref('loading_data')
 const allBoards = ref([])
@@ -167,8 +290,12 @@ const dragOverTray = ref(false)
 
 onMounted(async () => {
   try {
-    const resp = await fetch('/game-data/boards.json')
-    allBoards.value = await resp.json()
+    const [boardsResp, statsResp] = await Promise.all([
+      fetch('/game-data/boards.json'),
+      fetch('/game-data/stats.json'),
+    ])
+    allBoards.value = await boardsResp.json()
+    stats.value = await statsResp.json()
   } catch (e) {
     errorMsg.value = 'Could not load game data.'
   } finally {
@@ -325,9 +452,122 @@ function playAgain() {
 
 .game-title {
   font-size: 2rem;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   color: var(--accent-color);
 }
+
+/* ── TABS ── */
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #2a2a4a;
+}
+
+.tab-btn {
+  padding: 8px 22px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+
+.tab-btn.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.tab-btn:hover:not(.active) { color: var(--primary-light); }
+
+/* ── STATS ── */
+.stats-panel {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.stats-meta {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.stats-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #aaa;
+  margin: 24px 0 10px;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 56px;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  font-size: 0.85rem;
+  color: var(--primary-light);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-label--set {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.bar-track {
+  background: #1a1a30;
+  border-radius: 4px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width .4s ease;
+}
+
+.bar-value {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+}
+
+/* MTG color identity palette */
+.bar-white      { background: #f9f3d5; }
+.bar-blue       { background: #4a90d9; }
+.bar-black      { background: #9b59b6; }
+.bar-red        { background: #e74c3c; }
+.bar-green      { background: #6aaa64; }
+.bar-colorless  { background: #888; }
+
+/* generic type/set bar */
+.bar-type { background: var(--accent-color); opacity: 0.75; }
+
+/* rarity colours */
+.bar-common   { background: #aaa; }
+.bar-uncommon { background: #a0c4d8; }
+.bar-rare     { background: #c9a84c; }
+.bar-mythic   { background: #e87a2e; }
 
 .game-subtitle {
   color: #888;
