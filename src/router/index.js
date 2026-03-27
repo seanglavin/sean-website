@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import MyCatView from '../views/MyCatView.vue'
 import ResumeView from '../views/ResumeView.vue'
 import KomatsuWordlePage from '../views/KomatsuWordlePage.vue'
+import MtgGameView from '../views/MtgGameView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/resume',
       name: 'resume',
       component: ResumeView
+    },
+    {
+      path: '/mtg-game',
+      name: 'mtg-game',
+      component: MtgGameView
     }
   ]
 })
