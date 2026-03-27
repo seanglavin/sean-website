@@ -459,6 +459,7 @@ function playAgain() {
 /* ── TABS ── */
 .tab-bar {
   display: flex;
+  justify-content: center;
   gap: 4px;
   margin-bottom: 24px;
   border-bottom: 2px solid #2a2a4a;
