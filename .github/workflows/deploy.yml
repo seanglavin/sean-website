@@ -5,7 +5,8 @@ on:
   push:
     branches: ['main']
   schedule:
-    - cron: '0 0 1 * *'  # first of every month — refreshes MTG card data
+    - cron: '0 0 1 * *'   # first of every month — refreshes MTG card data
+    - cron: '0 8 * * *'   # daily at 08:00 UTC — refreshes sports data
   workflow_dispatch:
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
@@ -44,6 +45,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: Generate sports data
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: node scripts/generate-sports-data.js
       - name: Build
         run: npm run build
       - name: Copy index.html to 404.html
