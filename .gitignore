@@ -28,3 +28,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Generated sports data (produced by scripts/generate-sports-data.js at build time)
+public/sports-data/*.json
