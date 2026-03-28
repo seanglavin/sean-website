@@ -38,6 +38,11 @@ const router = createRouter({
       path: '/mtg-game',
       name: 'mtg-game',
       component: MtgGameView
+    },
+    {
+      path: '/sports',
+      name: 'sports',
+      component: () => import('@/views/SportsView.vue')
     }
   ]
 })
