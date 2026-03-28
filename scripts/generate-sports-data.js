@@ -144,11 +144,11 @@ async function fetchNHL() {
   // Player stats leaders (points, goals, assists)
   const SEASON = '20252026'
   // Fetch stats sequentially to avoid NHL API rate limits
-  const pointsData = await get(`https://api-web.nhle.com/v1/skater-stats-leaders/${SEASON}/2?categories=points&limit=200`)
+  const pointsData = await get(`https://api-web.nhle.com/v1/skater-stats-leaders/${SEASON}/2?categories=points&limit=1000`)
   await sleep(500)
-  const goalsData = await get(`https://api-web.nhle.com/v1/skater-stats-leaders/${SEASON}/2?categories=goals&limit=200`)
+  const goalsData = await get(`https://api-web.nhle.com/v1/skater-stats-leaders/${SEASON}/2?categories=goals&limit=1000`)
   await sleep(500)
-  const assistsData = await get(`https://api-web.nhle.com/v1/skater-stats-leaders/${SEASON}/2?categories=assists&limit=200`)
+  const assistsData = await get(`https://api-web.nhle.com/v1/skater-stats-leaders/${SEASON}/2?categories=assists&limit=1000`)
 
   // Merge into a per-player map keyed by player id
   const playerMap = {}
@@ -156,6 +156,7 @@ async function fetchNHL() {
     for (const p of list) {
       if (!playerMap[p.id]) {
         playerMap[p.id] = {
+          id: p.id,
           name: `${p.firstName.default} ${p.lastName.default}`,
           team: p.teamAbbrev,
           position: p.position,
@@ -174,6 +175,33 @@ async function fetchNHL() {
     (a, b) => (b.stats.PTS ?? 0) - (a.stats.PTS ?? 0)
   )
 
+  // Skater game logs (last 10 games per player)
+  console.log(`Fetching game logs for ${players.length} skaters…`)
+  for (let i = 0; i < players.length; i++) {
+    const p = players[i]
+    try {
+      const logData = await get(`https://api-web.nhle.com/v1/player/${p.id}/game-log/${SEASON}/2`)
+      p.game_log = (logData.gameLog ?? [])
+        .sort((a, b) => b.gameDate.localeCompare(a.gameDate))
+        .slice(0, 10)
+        .map(g => ({
+          date: g.gameDate,
+          opponent: g.opponentAbbrev,
+          home_away: g.homeRoadFlag === 'H' ? 'home' : 'away',
+          goals: g.goals,
+          assists: g.assists,
+          points: g.points,
+          plusMinus: g.plusMinus,
+          shots: g.shots,
+          toi: g.toi,
+        }))
+    } catch {
+      p.game_log = []
+    }
+    if (i % 50 === 49) console.log(`  …${i + 1}/${players.length} skaters done`)
+    await sleep(300)
+  }
+
   // Goalie stats leaders (wins, save%, GAA, shutouts)
   await sleep(500)
   const goalieWinsData = await get(`https://api-web.nhle.com/v1/goalie-stats-leaders/${SEASON}/2?categories=wins&limit=100`)
@@ -189,6 +217,7 @@ async function fetchNHL() {
     for (const p of list) {
       if (!goalieMap[p.id]) {
         goalieMap[p.id] = {
+          id: p.id,
           name: `${p.firstName.default} ${p.lastName.default}`,
           team: p.teamAbbrev,
           position: 'G',
@@ -213,6 +242,31 @@ async function fetchNHL() {
   const goalies = Object.values(goalieMap).sort(
     (a, b) => (b.stats.W ?? 0) - (a.stats.W ?? 0)
   )
+
+  // Goalie game logs (last 10 games per goalie)
+  console.log(`Fetching game logs for ${goalies.length} goalies…`)
+  for (let i = 0; i < goalies.length; i++) {
+    const g = goalies[i]
+    try {
+      const logData = await get(`https://api-web.nhle.com/v1/player/${g.id}/game-log/${SEASON}/2`)
+      g.game_log = (logData.gameLog ?? [])
+        .sort((a, b) => b.gameDate.localeCompare(a.gameDate))
+        .slice(0, 10)
+        .map(gl => ({
+          date: gl.gameDate,
+          opponent: gl.opponentAbbrev,
+          home_away: gl.homeRoadFlag === 'H' ? 'home' : 'away',
+          decision: gl.decision ?? '–',
+          saves: (gl.shotsAgainst ?? 0) - (gl.goalsAgainst ?? 0),
+          goalsAgainst: gl.goalsAgainst ?? 0,
+          savePct: gl.savePctg != null ? gl.savePctg.toFixed(3) : '–',
+          toi: gl.toi,
+        }))
+    } catch {
+      g.game_log = []
+    }
+    await sleep(300)
+  }
 
   return {
     generated_at: new Date().toISOString(),
