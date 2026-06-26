@@ -17,9 +17,7 @@ const headerLinks = [
   { text: 'Home', to: '/' },
   { text: 'About', to: '/about' },
   { text: 'My Cat', to: '/mycat' },
-  { text: 'Komatsu-le', to: '/komatsu-le' },
   { text: 'MTG Game', to: '/mtg-game' },
-  { text: 'Sports', to: '/sports' },
   // { text: 'Resume', to: '/resume' },
 ]
 </script>

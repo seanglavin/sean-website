@@ -3,7 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import MyCatView from '../views/MyCatView.vue'
 import ResumeView from '../views/ResumeView.vue'
-import KomatsuWordlePage from '../views/KomatsuWordlePage.vue'
 import MtgGameView from '../views/MtgGameView.vue'
 
 const router = createRouter({
@@ -25,11 +24,6 @@ const router = createRouter({
       component: MyCatView
     },
     {
-      path: '/komatsu-le',
-      name: 'KomatsuWordle',
-      component: KomatsuWordlePage
-    },
-    {
       path: '/resume',
       name: 'resume',
       component: ResumeView
@@ -39,11 +33,6 @@ const router = createRouter({
       name: 'mtg-game',
       component: MtgGameView
     },
-    {
-      path: '/sports',
-      name: 'sports',
-      component: () => import('@/views/SportsView.vue')
-    }
   ]
 })
 
