@@ -6,7 +6,7 @@
           {{ link.text }}
         </a>
         <!-- add a | between each link -->
-        <span v-if="index < footerLinks.length - 1" class="text-primaryLight"> | </span>
+        <span v-if="index < footerLinks.length - 1" class="text-textColor"> | </span>
       </li>
     </ul>
   </footer>
@@ -22,7 +22,7 @@ const footerLinks = [
 
 <style scoped>
 .bot-bar {
-  @apply bg-secondaryBlueDark p-3 w-full
+  @apply bg-surfaceColor p-3 w-full
 }
 .bot-bar-links {
   @apply flex items-center justify-center list-none gap-2 m-0

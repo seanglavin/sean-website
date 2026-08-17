@@ -1,6 +1,7 @@
 <template>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <HeaderComp />
-  <main class="router-view-container">
+  <main id="main-content" class="router-view-container">
     <router-view />
   </main>
   <FooterComp />
@@ -18,8 +19,8 @@ import HeaderComp from '@/components/HeaderComp.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--primary-light);
-  background-color: var(--secondary-blue-light);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   background-image: url('@/assets/images/sideprofileoverlay2-removebg.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -33,5 +34,9 @@ import HeaderComp from '@/components/HeaderComp.vue'
 
 .router-view-container {
   @apply flex-1
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-accentColor text-onAccent px-4 py-2 rounded font-bold;
 }
 </style>

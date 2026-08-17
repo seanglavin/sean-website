@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "slug": "mtg-art-game",
+      "title": "MTG Art Game",
+      "category": "Personal",
+      "summary": "A card-guessing game built around Magic: The Gathering art. Currently being redesigned.",
+      "route": "/mtg-game"
+    }
+  ]
+}

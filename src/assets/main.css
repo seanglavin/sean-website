@@ -1,14 +1,50 @@
+/* Dark theme is the default look of the site, shown when no preference is
+   stored and the OS has no light-mode preference. Light values are layered
+   on top via prefers-color-scheme and overridden either way by [data-theme]
+   once the user picks explicitly. */
 :root {
-    --primary-light: #f5f5f5;
-    --secondary-blue-light: #043049;
-    --secondary-blue-dark: #032a42;
-    --accent-color: #ff5a5f;
-    --accent-color-2: #42b983;
-    --primary-dark: #021927;
-    --secondary-dark: #232323;
+    --color-bg: #043049;
+    --color-surface: #032a42;
+    --color-text: #f5f5f5;
+    --color-accent: #ff5a5f;
+    --color-accent-2: #42b983;
+    --color-on-accent: #021927;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+        --color-bg: #f5f5f5;
+        --color-surface: #e4e9ed;
+        --color-text: #032a42;
+        --color-accent: #c8373b;
+        --color-accent-2: #1f7a52;
+        --color-on-accent: #f5f5f5;
+    }
+}
+
+:root[data-theme="light"] {
+    --color-bg: #f5f5f5;
+    --color-surface: #e4e9ed;
+    --color-text: #032a42;
+    --color-accent: #c8373b;
+    --color-accent-2: #1f7a52;
+    --color-on-accent: #f5f5f5;
+}
+
+:root[data-theme="dark"] {
+    --color-bg: #043049;
+    --color-surface: #032a42;
+    --color-text: #f5f5f5;
+    --color-accent: #ff5a5f;
+    --color-accent-2: #42b983;
+    --color-on-accent: #021927;
 }
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-container {
+    @apply flex flex-wrap justify-center gap-4;
+}

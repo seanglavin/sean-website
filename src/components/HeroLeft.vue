@@ -1,8 +1,4 @@
 <template>
-  <!--
-
-    -->
-
     <div class="hero-container">
       <div class="text-container">
         <h1 class="title">

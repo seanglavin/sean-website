@@ -46,6 +46,6 @@ async function downloadResumePDF() {
 
 <style scoped>
 .button {
-  @apply block m-3 w-full font-bold px-12 py-3 bg-accentColor rounded cursor-pointer hover:bg-accentColor2
+  @apply block m-3 w-full font-bold px-12 py-3 bg-accentColor text-onAccent rounded cursor-pointer hover:bg-accentColor2
 }
 </style>
