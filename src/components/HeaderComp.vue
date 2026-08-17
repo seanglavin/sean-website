@@ -8,23 +8,11 @@
         <!-- adds a | between each link -->
         <span v-if="index < headerLinks.length - 1" class="text-textColor"> | </span>
       </router-link>
-      <span class="text-textColor"> | </span>
-      <button
-        type="button"
-        class="theme-toggle"
-        :aria-pressed="theme === 'dark'"
-        :aria-label="theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
-        @click="toggleTheme"
-      >{{ theme === 'light' ? 'Dark' : 'Light' }}</button>
     </nav>
   </header>
 </template>
 
 <script setup>
-import { useTheme } from '@/composables/useTheme'
-
-const { theme, toggleTheme } = useTheme()
-
 const headerLinks = [
   { text: 'Home', to: '/' },
   { text: 'About', to: '/about' },
@@ -39,15 +27,12 @@ const headerLinks = [
   @apply bg-surfaceColor p-5 w-full
 }
 .top-bar-nav {
-  @apply flex items-center justify-center flex-wrap gap-2
+  @apply flex items-center justify-center gap-2
 }
 .nav-bar-link {
   @apply font-bold text-textColor hover:text-accentColor
 }
 .nav-bar-link.router-link-active {
   @apply text-accentColor
-}
-.theme-toggle {
-  @apply font-bold text-textColor hover:text-accentColor cursor-pointer
 }
 </style>
