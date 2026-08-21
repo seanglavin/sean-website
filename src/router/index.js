@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import projectsData from '../assets/text/projects.json'
+import { riftboundRoutes } from '../features/riftbound'
 
 const HomeView = () => import('../views/HomeView.vue')
 const AboutView = () => import('../views/AboutView.vue')
@@ -68,6 +69,7 @@ const router = createRouter({
         description: 'Personal and professional projects by Sean Glavin.',
       }
     },
+    ...riftboundRoutes,
     {
       path: '/projects/:slug',
       name: 'project-detail',

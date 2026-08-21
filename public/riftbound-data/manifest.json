@@ -1,0 +1,51 @@
+{
+ "catalog": {
+  "card_count": 1180,
+  "file": "cards.json",
+  "generated_at": "2026-08-21T14:59:20+00:00",
+  "sets": [
+   "OGN",
+   "OGS",
+   "SFD",
+   "UNL",
+   "VEN"
+  ]
+ },
+ "generated_at": "2026-08-21T15:06:15+00:00",
+ "retailers": [
+  {
+   "cards_covered": 1164,
+   "currency": "CAD",
+   "file": "prices/facetofacegames.json",
+   "generated_at": "2026-08-21T14:59:32+00:00",
+   "id": "facetofacegames",
+   "listing_count": 3346,
+   "name": "Face to Face Games",
+   "site_url": "https://facetofacegames.com",
+   "status": "ok"
+  },
+  {
+   "cards_covered": 1164,
+   "currency": "CAD",
+   "file": "prices/games401.json",
+   "generated_at": "2026-08-21T14:59:34+00:00",
+   "id": "games401",
+   "listing_count": 5001,
+   "name": "401 Games",
+   "site_url": "https://store.401games.ca",
+   "status": "ok"
+  },
+  {
+   "cards_covered": 1165,
+   "currency": "CAD",
+   "file": "prices/tapsgames.json",
+   "generated_at": "2026-08-21T15:06:15+00:00",
+   "id": "tapsgames",
+   "listing_count": 8385,
+   "name": "Taps Games",
+   "site_url": "https://tapsgames.com",
+   "status": "ok"
+  }
+ ],
+ "schema_version": 1
+}

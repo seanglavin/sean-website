@@ -1,0 +1,54 @@
+# Regenerates the Riftbound dashboard's data and commits it.
+#
+# Deliberately separate from deploy.yml: the previous MTG generation step was
+# removed from the deploy job because a flaky fetch kept blocking the site's
+# deploy. The commit this job makes triggers deploy.yml on its own.
+name: Refresh Riftbound data
+
+on:
+  schedule:
+    - cron: '20 9 * * *'
+  workflow_dispatch:
+    inputs:
+      catalog:
+        description: 'Also regenerate the card catalogue'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: 'riftbound-data'
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install httpx pytest
+      - name: Test card code parsing
+        run: pytest scripts/riftbound/tests -q
+      - name: Refresh prices
+        run: python scripts/riftbound/generate.py --prices
+      - name: Refresh catalogue
+        if: inputs.catalog
+        run: python scripts/riftbound/generate.py --catalog
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- public/riftbound-data; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add public/riftbound-data
+          git commit -m 'Refresh Riftbound data'
+          git push

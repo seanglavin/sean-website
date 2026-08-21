@@ -18,6 +18,7 @@ const headerLinks = [
   { text: 'About', to: '/about' },
   { text: 'My Cat', to: '/mycat' },
   { text: 'Projects', to: '/projects' },
+  { text: 'Riftbound', to: '/riftbound' },
   // { text: 'Resume', to: '/resume' },
 ]
 </script>
