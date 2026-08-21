@@ -11,7 +11,7 @@
    "VEN"
   ]
  },
- "generated_at": "2026-08-21T14:59:38+00:00",
+ "generated_at": "2026-08-21T15:06:15+00:00",
  "retailers": [
   {
    "cards_covered": 1164,
@@ -39,7 +39,7 @@
    "cards_covered": 1165,
    "currency": "CAD",
    "file": "prices/tapsgames.json",
-   "generated_at": "2026-08-21T14:59:38+00:00",
+   "generated_at": "2026-08-21T15:06:15+00:00",
    "id": "tapsgames",
    "listing_count": 8385,
    "name": "Taps Games",

@@ -1,7 +1,14 @@
 <template>
   <section class="panel">
     <AsyncState :loading="loading" :error="error" :empty="!cards.length">
-      <CardDetailDrawer :card="selected" @close="selected = null" />
+      <CardDetailDrawer :card="selected" @close="selected = null">
+        <template #collection="{ card }">
+          <CollectionControls :code="card.code" />
+        </template>
+        <template #prices="{ card }">
+          <PriceTable :code="card.code" :offers="priceIndex.offersFor(card.code)" />
+        </template>
+      </CardDetailDrawer>
       <CardFilters
         v-model:query="query"
         :filters="filters"
@@ -29,10 +36,16 @@ import AsyncState from '@/components/ui/AsyncState.vue'
 import CardDetailDrawer from '../components/CardDetailDrawer.vue'
 import CardFilters from '../components/CardFilters.vue'
 import CardGrid from '../components/CardGrid.vue'
+import CollectionControls from '../components/CollectionControls.vue'
+import PriceTable from '../components/PriceTable.vue'
 import { useCardCatalog } from '../composables/useCardCatalog'
 import { useCardFilters } from '../composables/useCardFilters'
+import { usePriceIndex } from '../composables/usePriceIndex'
 
 const { cards, sets, rarities, types, domains, error, loading } = useCardCatalog()
+// Prices load alongside but must not gate browsing; the drawer renders whatever
+// has arrived, and loadStaticJson caches across panels so tab switches refetch nothing.
+const priceIndex = usePriceIndex()
 const { query, filters, matches, visible, truncated, active, reset, MAX_RESULTS } =
   useCardFilters(cards)
 

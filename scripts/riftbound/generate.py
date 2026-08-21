@@ -62,6 +62,28 @@ def _known_codes() -> set[str]:
     return {card["code"] for card in catalog["cards"]}
 
 
+# A store that quietly returns nothing must not overwrite good data. Shopify
+# answers 200 with an empty product list for a renamed collection handle, so
+# an empty or sharply collapsed result is treated as a failure, not a scrape
+# that legitimately found no stock.
+COLLAPSE_RATIO: Final = 0.5
+
+
+def _previous_listing_count(manifest: dict[str, Any], retailer_id: str) -> int:
+    for entry in manifest.get("retailers", []):
+        if entry["id"] == retailer_id and entry.get("status") == "ok":
+            return int(entry.get("listing_count") or 0)
+    return 0
+
+
+def _check_plausible(manifest: dict[str, Any], retailer_id: str, count: int) -> None:
+    if count == 0:
+        raise RuntimeError("returned no matched offers")
+    previous = _previous_listing_count(manifest, retailer_id)
+    if previous and count < previous * COLLAPSE_RATIO:
+        raise RuntimeError(f"offers collapsed from {previous} to {count}")
+
+
 def generate_prices(
     client: httpx.Client, manifest: dict[str, Any], retailer_ids: list[str]
 ) -> list[dict[str, Any]]:
@@ -73,6 +95,7 @@ def generate_prices(
         try:
             result = retailer.fetch(client)
             payload, summary = build_prices(retailer, result.offers, result.unmatched, known)
+            _check_plausible(manifest, retailer_id, summary["offers_kept"])
         except Exception as error:  # noqa: BLE001 - one store must not stop the rest
             logger.error("%s failed: %s", retailer_id, error)
             manifest_module.mark_failed(manifest, retailer_id, retailer.name, str(error))
