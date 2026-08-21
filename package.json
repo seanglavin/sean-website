@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --port 8080",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "sports-data": "node scripts/generate-sports-data.js"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "chart.js": "^4.5.1",

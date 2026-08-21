@@ -29,8 +29,6 @@ coverage
 
 *.tsbuildinfo
 
-# Generated sports data (produced by scripts/generate-sports-data.js at build time)
-public/sports-data/*.json
 
 # Local-only coverage report from scripts/riftbound/generate.py
 riftbound-coverage.json
