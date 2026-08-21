@@ -34,3 +34,6 @@ public/sports-data/*.json
 
 # Local-only coverage report from scripts/riftbound/generate.py
 riftbound-coverage.json
+
+__pycache__/
+*.pyc
