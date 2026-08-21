@@ -21791,7 +21791,7 @@
       "NM",
       0,
       409,
-      true
+      false
      ],
      [
       "LP",
@@ -62704,7 +62704,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-08-21T20:59:50+00:00",
+ "generated_at": "2026-08-21T21:04:31+00:00",
  "product_url_template": "https://tapsgames.com/products/{handle}",
  "retailer_id": "tapsgames",
  "schema_version": 1
