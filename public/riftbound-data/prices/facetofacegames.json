@@ -1301,7 +1301,7 @@
       "NM",
       0,
       2499,
-      true
+      false
      ],
      [
       "PL",
@@ -1379,7 +1379,7 @@
       "NM",
       0,
       29,
-      true
+      false
      ],
      [
       "PL",
@@ -2493,7 +2493,7 @@
       "NM",
       0,
       249,
-      true
+      false
      ],
      [
       "PL",
@@ -2673,7 +2673,7 @@
       "NM",
       0,
       1899,
-      true
+      false
      ],
      [
       "PL",
@@ -3965,7 +3965,7 @@
       "NM",
       0,
       1999,
-      true
+      false
      ],
      [
       "PL",
@@ -3985,7 +3985,7 @@
       "NM",
       0,
       699,
-      true
+      false
      ],
      [
       "PL",
@@ -4025,7 +4025,7 @@
       "NM",
       0,
       8499,
-      true
+      false
      ],
      [
       "PL",
@@ -4635,7 +4635,7 @@
       "NM",
       0,
       49,
-      true
+      false
      ],
      [
       "PL",
@@ -5589,7 +5589,7 @@
       "NM",
       0,
       149,
-      true
+      false
      ],
      [
       "PL",
@@ -5721,7 +5721,7 @@
       "NM",
       0,
       29,
-      true
+      false
      ],
      [
       "PL",
@@ -5969,7 +5969,7 @@
       "NM",
       0,
       599,
-      true
+      false
      ],
      [
       "PL",
@@ -5987,7 +5987,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "PL",
@@ -6197,7 +6197,7 @@
       "NM",
       0,
       799,
-      true
+      false
      ],
      [
       "PL",
@@ -6487,7 +6487,7 @@
       "NM",
       0,
       699,
-      true
+      false
      ],
      [
       "PL",
@@ -6507,7 +6507,7 @@
       "NM",
       0,
       499,
-      true
+      false
      ],
      [
       "PL",
@@ -6727,7 +6727,7 @@
       "NM",
       0,
       6999,
-      true
+      false
      ],
      [
       "PL",
@@ -7071,7 +7071,7 @@
       "NM",
       0,
       149,
-      true
+      false
      ],
      [
       "PL",
@@ -13073,7 +13073,7 @@
       "NM",
       0,
       149,
-      true
+      false
      ],
      [
       "PL",
@@ -15571,7 +15571,7 @@
       "NM",
       0,
       7999,
-      true
+      false
      ],
      [
       "PL",
@@ -16475,7 +16475,7 @@
       "NM",
       0,
       1099,
-      true
+      false
      ],
      [
       "PL",
@@ -17825,7 +17825,7 @@
       "NM",
       0,
       6499,
-      true
+      false
      ],
      [
       "PL",
@@ -18245,7 +18245,7 @@
       "NM",
       0,
       20999,
-      true
+      false
      ],
      [
       "PL",
@@ -26279,7 +26279,7 @@
       "NM",
       0,
       7499,
-      true
+      false
      ],
      [
       "PL",
@@ -27011,7 +27011,7 @@
       "NM",
       0,
       149,
-      true
+      false
      ],
      [
       "PL",
@@ -27703,7 +27703,7 @@
       "NM",
       0,
       49,
-      true
+      false
      ],
      [
       "PL",
@@ -31071,7 +31071,7 @@
       "NM",
       0,
       249,
-      true
+      false
      ],
      [
       "PL",
@@ -32391,7 +32391,7 @@
       "NM",
       0,
       1999,
-      true
+      false
      ],
      [
       "PL",
@@ -32444,7 +32444,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-08-23T09:47:28+00:00",
+ "generated_at": "2026-08-24T10:07:50+00:00",
  "product_url_template": "https://facetofacegames.com/products/{handle}",
  "retailer_id": "facetofacegames",
  "schema_version": 1
