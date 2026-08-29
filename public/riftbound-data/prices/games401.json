@@ -2985,7 +2985,7 @@
       "NM",
       0,
       1400,
-      true
+      false
      ],
      [
       "SP",
@@ -4257,7 +4257,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -4557,7 +4557,7 @@
       "NM",
       0,
       400,
-      true
+      false
      ],
      [
       "SP",
@@ -7709,7 +7709,7 @@
       "SP",
       1,
       480,
-      true
+      false
      ],
      [
       "MP",
@@ -7827,7 +7827,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -9675,7 +9675,7 @@
       "NM",
       0,
       1500,
-      true
+      false
      ],
      [
       "SP",
@@ -26665,7 +26665,7 @@
       "NM",
       0,
       1100,
-      true
+      false
      ],
      [
       "SP",
@@ -26895,7 +26895,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -27981,7 +27981,7 @@
       "NM",
       0,
       1000,
-      true
+      false
      ],
      [
       "SP",
@@ -29361,7 +29361,7 @@
       "MP",
       2,
       2145,
-      true
+      false
      ]
     ]
    }
@@ -35043,7 +35043,7 @@
       "NM",
       0,
       35,
-      true
+      false
      ],
      [
       "SP",
@@ -39091,7 +39091,7 @@
       "NM",
       0,
       35,
-      true
+      false
      ],
      [
       "SP",
@@ -42338,7 +42338,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-08-28T20:57:04+00:00",
+ "generated_at": "2026-08-29T14:33:44+00:00",
  "product_url_template": "https://store.401games.ca/products/{handle}",
  "retailer_id": "games401",
  "schema_version": 1
