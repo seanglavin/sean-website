@@ -31891,7 +31891,7 @@
       "NM",
       0,
       10999,
-      true
+      false
      ],
      [
       "PL",
@@ -32444,7 +32444,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-08-29T14:33:38+00:00",
+ "generated_at": "2026-08-30T14:26:57+00:00",
  "product_url_template": "https://facetofacegames.com/products/{handle}",
  "retailer_id": "facetofacegames",
  "schema_version": 1
