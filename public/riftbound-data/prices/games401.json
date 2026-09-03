@@ -661,7 +661,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -1263,7 +1263,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -1945,7 +1945,7 @@
       "MP",
       2,
       455,
-      true
+      false
      ]
     ]
    }
@@ -3297,7 +3297,7 @@
       "NM",
       0,
       2400,
-      true
+      false
      ],
      [
       "SP",
@@ -3453,7 +3453,7 @@
       "NM",
       0,
       3200,
-      true
+      false
      ],
      [
       "SP",
@@ -4531,7 +4531,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -5123,7 +5123,7 @@
       "NM",
       0,
       2300,
-      true
+      false
      ],
      [
       "SP",
@@ -7803,7 +7803,7 @@
       "NM",
       0,
       750,
-      true
+      false
      ],
      [
       "SP",
@@ -9525,7 +9525,7 @@
       "NM",
       0,
       200,
-      true
+      false
      ],
      [
       "SP",
@@ -10027,7 +10027,7 @@
       "NM",
       0,
       200,
-      true
+      false
      ],
      [
       "SP",
@@ -10053,7 +10053,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -10287,7 +10287,7 @@
       "NM",
       0,
       200,
-      true
+      false
      ],
      [
       "SP",
@@ -10365,7 +10365,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -10443,7 +10443,7 @@
       "NM",
       0,
       2600,
-      true
+      false
      ],
      [
       "SP",
@@ -10495,7 +10495,7 @@
       "NM",
       0,
       500,
-      true
+      false
      ],
      [
       "SP",
@@ -10839,7 +10839,7 @@
       "SP",
       1,
       40,
-      false
+      true
      ],
      [
       "MP",
@@ -11223,7 +11223,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -11599,7 +11599,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -12449,7 +12449,7 @@
       "NM",
       0,
       48500,
-      true
+      false
      ],
      [
       "SP",
@@ -13066,7 +13066,7 @@
   ],
   "OGS-001": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "annie-fiery-001-024-epic",
     "offers": [
      [
@@ -13144,7 +13144,7 @@
   ],
   "OGS-004": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "master-yi-meditative-004-024-rare",
     "offers": [
      [
@@ -13196,7 +13196,7 @@
   ],
   "OGS-006": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "lux-illuminated-006-024-rare",
     "offers": [
      [
@@ -13222,7 +13222,7 @@
   ],
   "OGS-007": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "garen-rugged-007-024-rare",
     "offers": [
      [
@@ -13274,7 +13274,7 @@
   ],
   "OGS-009": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "master-yi-honed-009-024-epic",
     "offers": [
      [
@@ -13300,7 +13300,7 @@
   ],
   "OGS-010": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "annie-stubborn-010-024-rare",
     "offers": [
      [
@@ -13319,7 +13319,7 @@
       "MP",
       2,
       455,
-      true
+      false
      ]
     ]
    }
@@ -13378,7 +13378,7 @@
   ],
   "OGS-013": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "garen-commander-013-024-epic",
     "offers": [
      [
@@ -13404,7 +13404,7 @@
   ],
   "OGS-014": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "lux-crownguard-014-024-epic",
     "offers": [
      [
@@ -13482,7 +13482,7 @@
   ],
   "OGS-017": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "annie-dark-child-starter-017-024-rare",
     "offers": [
      [
@@ -13508,7 +13508,7 @@
   ],
   "OGS-018": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "tibbers-018-024-epic",
     "offers": [
      [
@@ -13534,7 +13534,7 @@
   ],
   "OGS-019": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "master-yi-wuju-bladesman-starter-019-024-rare",
     "offers": [
      [
@@ -13560,7 +13560,7 @@
   ],
   "OGS-020": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "highlander-020-024-epic",
     "offers": [
      [
@@ -13586,7 +13586,7 @@
   ],
   "OGS-021": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "lux-lady-of-luminosity-starter-021-024-rare",
     "offers": [
      [
@@ -13612,7 +13612,7 @@
   ],
   "OGS-022": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "final-spark-022-024-epic",
     "offers": [
      [
@@ -13638,7 +13638,7 @@
   ],
   "OGS-023": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "garen-might-of-demacia-starter-023-024-rare",
     "offers": [
      [
@@ -13664,7 +13664,7 @@
   ],
   "OGS-024": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "decisive-strike-024-024-epic",
     "offers": [
      [
@@ -16043,7 +16043,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -16979,7 +16979,7 @@
       "NM",
       0,
       200,
-      true
+      false
      ],
      [
       "SP",
@@ -17437,7 +17437,7 @@
       "NM",
       0,
       400,
-      true
+      false
      ],
      [
       "SP",
@@ -18805,7 +18805,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -20477,7 +20477,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -21101,7 +21101,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -23227,7 +23227,7 @@
       "NM",
       0,
       105000,
-      true
+      false
      ],
      [
       "SP",
@@ -25115,7 +25115,7 @@
       "NM",
       0,
       1300,
-      true
+      false
      ],
      [
       "SP",
@@ -25297,7 +25297,7 @@
       "NM",
       0,
       2500,
-      true
+      false
      ],
      [
       "SP",
@@ -25323,7 +25323,7 @@
       "NM",
       0,
       2900,
-      true
+      false
      ],
      [
       "SP",
@@ -26003,7 +26003,7 @@
       "NM",
       0,
       200,
-      true
+      false
      ],
      [
       "SP",
@@ -26691,7 +26691,7 @@
       "NM",
       0,
       200,
-      true
+      false
      ],
      [
       "SP",
@@ -26743,7 +26743,7 @@
       "NM",
       0,
       3700,
-      true
+      false
      ],
      [
       "SP",
@@ -27245,7 +27245,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -27419,7 +27419,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -28007,7 +28007,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -29115,7 +29115,7 @@
       "NM",
       0,
       900,
-      true
+      false
      ],
      [
       "SP",
@@ -29193,7 +29193,7 @@
       "NM",
       0,
       400,
-      true
+      false
      ],
      [
       "SP",
@@ -29271,7 +29271,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -29297,13 +29297,13 @@
       "NM",
       0,
       300,
-      true
+      false
      ],
      [
       "SP",
       1,
       240,
-      true
+      false
      ],
      [
       "MP",
@@ -29829,7 +29829,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -30431,7 +30431,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -30587,7 +30587,7 @@
       "NM",
       0,
       1000,
-      true
+      false
      ],
      [
       "SP",
@@ -30639,7 +30639,7 @@
       "NM",
       0,
       3000,
-      true
+      false
      ],
      [
       "SP",
@@ -30921,7 +30921,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -30945,7 +30945,7 @@
       "NM",
       0,
       25,
-      true
+      false
      ],
      [
       "SP",
@@ -31825,7 +31825,7 @@
       "NM",
       0,
       500,
-      true
+      false
      ],
      [
       "SP",
@@ -32241,7 +32241,7 @@
       "NM",
       0,
       1700,
-      true
+      false
      ],
      [
       "SP",
@@ -32345,7 +32345,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -32468,7 +32468,7 @@
   ],
   "UNL-193": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "vex-gloomist-193-219-rare",
     "offers": [
      [
@@ -32553,7 +32553,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -32811,7 +32811,7 @@
       "NM",
       0,
       25,
-      true
+      false
      ],
      [
       "SP",
@@ -33287,7 +33287,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -35043,7 +35043,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -35296,7 +35296,7 @@
   ],
   "VEN-023": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "zed-from-the-shadows-023-166-epic",
     "offers": [
      [
@@ -35322,7 +35322,7 @@
   ],
   "VEN-023a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "zed-from-the-shadows-alternate-art-023a-166-epic",
     "offers": [
      [
@@ -36005,7 +36005,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -36133,7 +36133,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -36178,7 +36178,7 @@
   ],
   "VEN-042": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "shen-scourge-of-shadows-042-166-rare",
     "offers": [
      [
@@ -36204,7 +36204,7 @@
   ],
   "VEN-042a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "shen-scourge-of-shadows-alternate-art-042a-166-rare",
     "offers": [
      [
@@ -36917,7 +36917,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -37067,7 +37067,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -37112,7 +37112,7 @@
   ],
   "VEN-063": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "nasus-guardian-of-knowledge-063-166-rare",
     "offers": [
      [
@@ -37138,7 +37138,7 @@
   ],
   "VEN-063a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "nasus-guardian-of-knowledge-alternate-art-063a-166-rare",
     "offers": [
      [
@@ -37268,7 +37268,7 @@
   ],
   "VEN-068": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "jayce-brilliant-inventor-068-166-epic",
     "offers": [
      [
@@ -37294,7 +37294,7 @@
   ],
   "VEN-068a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "jayce-brilliant-inventor-alternate-art-068a-166-epic",
     "offers": [
      [
@@ -37320,7 +37320,7 @@
   ],
   "VEN-069": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "mel-newly-awakened-069-166-epic",
     "offers": [
      [
@@ -37346,7 +37346,7 @@
   ],
   "VEN-069a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "mel-newly-awakened-alternate-art-069a-166-epic",
     "offers": [
      [
@@ -37879,7 +37879,7 @@
       "NM",
       0,
       35,
-      true
+      false
      ],
      [
       "SP",
@@ -38280,14 +38280,14 @@
   ],
   "VEN-090": [
    {
-    "finish": "foil",
+    "finish": "nonfoil",
     "handle": "cataclysmic-duel-090-166-epic",
     "offers": [
      [
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -38313,7 +38313,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -39136,7 +39136,7 @@
   ],
   "VEN-109": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "illaoi-prophet-of-the-great-kraken-109-166-rare",
     "offers": [
      [
@@ -39162,7 +39162,7 @@
   ],
   "VEN-110": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "mel-defiant-soul-110-166-rare",
     "offers": [
      [
@@ -39188,7 +39188,7 @@
   ],
   "VEN-110a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "mel-defiant-soul-alternate-art-110a-166-rare",
     "offers": [
      [
@@ -39240,7 +39240,7 @@
   ],
   "VEN-112": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "zed-without-a-sound-112-166-rare",
     "offers": [
      [
@@ -39266,7 +39266,7 @@
   ],
   "VEN-112a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "zed-without-a-sound-alternate-art-112a-166-rare",
     "offers": [
      [
@@ -39351,7 +39351,7 @@
       "NM",
       0,
       900,
-      true
+      false
      ],
      [
       "SP",
@@ -39803,7 +39803,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -40356,7 +40356,7 @@
   ],
   "VEN-138": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "shen-leader-of-the-kinkou-order-138-166-epic",
     "offers": [
      [
@@ -40382,7 +40382,7 @@
   ],
   "VEN-138a": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "shen-leader-of-the-kinkou-order-alternate-art-138a-166-epic",
     "offers": [
      [
@@ -40883,7 +40883,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -41376,7 +41376,7 @@
   ],
   "VEN-167": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "vi-destructive-167-166-rare",
     "offers": [
      [
@@ -41402,7 +41402,7 @@
   ],
   "VEN-168": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "jinx-demolitionist-overnumbered-168-166-rare",
     "offers": [
      [
@@ -41428,7 +41428,7 @@
   ],
   "VEN-169": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "zed-from-the-shadows-overnumbered-169-166-epic",
     "offers": [
      [
@@ -41454,14 +41454,14 @@
   ],
   "VEN-170": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "shen-scourge-of-shadows-overnumbered-170-166-rare",
     "offers": [
      [
       "NM",
       0,
       8300,
-      true
+      false
      ],
      [
       "SP",
@@ -41643,7 +41643,7 @@
       "NM",
       0,
       10500,
-      true
+      false
      ],
      [
       "SP",
@@ -41662,14 +41662,14 @@
   ],
   "VEN-178": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "nasus-guardian-of-knowledge-overnumbered-178-166-rare",
     "offers": [
      [
       "NM",
       0,
       10500,
-      true
+      false
      ],
      [
       "SP",
@@ -41766,7 +41766,7 @@
   ],
   "VEN-182": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "illaoi-prophet-of-the-great-kraken-overnumbered-182-166-rare",
     "offers": [
      [
@@ -41922,7 +41922,7 @@
   ],
   "VEN-188": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "mel-defiant-soul-overnumbered-188-166-rare",
     "offers": [
      [
@@ -42241,7 +42241,7 @@
       "NM",
       0,
       16500,
-      true
+      false
      ],
      [
       "SP",
@@ -42312,7 +42312,7 @@
   ],
   "VEN-SP6": [
    {
-    "finish": "nonfoil",
+    "finish": "foil",
     "handle": "lux-crownguard-sp6-006-epic",
     "offers": [
      [
@@ -42338,7 +42338,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-09-02T13:43:43+00:00",
+ "generated_at": "2026-09-03T13:39:13+00:00",
  "product_url_template": "https://store.401games.ca/products/{handle}",
  "retailer_id": "games401",
  "schema_version": 1
