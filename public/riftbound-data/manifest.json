@@ -11,13 +11,13 @@
    "VEN"
   ]
  },
- "generated_at": "2026-09-13T13:50:10+00:00",
+ "generated_at": "2026-09-14T15:55:42+00:00",
  "retailers": [
   {
    "cards_covered": 1164,
    "currency": "CAD",
    "file": "prices/facetofacegames.json",
-   "generated_at": "2026-09-13T13:50:06+00:00",
+   "generated_at": "2026-09-14T15:55:35+00:00",
    "id": "facetofacegames",
    "listing_count": 3346,
    "name": "Face to Face Games",
@@ -27,26 +27,24 @@
   {
    "cards_covered": 1164,
    "currency": "CAD",
-   "error": "Client error '429 Too Many Requests' for url 'https://store.401games.ca/collections/riftbound-league-of-legends-singles/products.json?limit=250&page=8'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
    "file": "prices/games401.json",
-   "generated_at": "2026-09-12T12:55:22+00:00",
+   "generated_at": "2026-09-14T15:55:38+00:00",
    "id": "games401",
    "listing_count": 5001,
    "name": "401 Games",
    "site_url": "https://store.401games.ca",
-   "status": "error"
+   "status": "ok"
   },
   {
    "cards_covered": 1165,
    "currency": "CAD",
-   "error": "Client error '429 Too Many Requests' for url 'https://tapsgames.com/collections/riftbound-singles/products.json?limit=250&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
    "file": "prices/tapsgames.json",
-   "generated_at": "2026-09-12T12:55:25+00:00",
+   "generated_at": "2026-09-14T15:55:42+00:00",
    "id": "tapsgames",
    "listing_count": 8385,
    "name": "Taps Games",
    "site_url": "https://tapsgames.com",
-   "status": "error"
+   "status": "ok"
   }
  ],
  "schema_version": 1
