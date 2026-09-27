@@ -961,7 +961,7 @@
       "NM",
       0,
       199,
-      true
+      false
      ],
      [
       "PL",
@@ -2533,7 +2533,7 @@
       "NM",
       0,
       349,
-      true
+      false
      ],
      [
       "PL",
@@ -2653,7 +2653,7 @@
       "NM",
       0,
       199,
-      true
+      false
      ],
      [
       "PL",
@@ -5077,7 +5077,7 @@
       "NM",
       0,
       199,
-      true
+      false
      ],
      [
       "PL",
@@ -5237,7 +5237,7 @@
       "NM",
       0,
       149,
-      true
+      false
      ],
      [
       "PL",
@@ -6547,7 +6547,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "PL",
@@ -6727,7 +6727,7 @@
       "NM",
       0,
       3999,
-      true
+      false
      ],
      [
       "PL",
@@ -8199,7 +8199,7 @@
       "NM",
       0,
       249,
-      true
+      false
      ],
      [
       "PL",
@@ -12559,7 +12559,7 @@
       "NM",
       0,
       299,
-      true
+      false
      ],
      [
       "PL",
@@ -13205,7 +13205,7 @@
       "NM",
       0,
       29,
-      true
+      false
      ],
      [
       "PL",
@@ -13263,7 +13263,7 @@
       "NM",
       0,
       49,
-      true
+      false
      ],
      [
       "PL",
@@ -16515,7 +16515,7 @@
       "NM",
       0,
       699,
-      true
+      false
      ],
      [
       "PL",
@@ -21277,7 +21277,7 @@
       "NM",
       0,
       799,
-      true
+      false
      ],
      [
       "PL",
@@ -22501,7 +22501,7 @@
       "NM",
       0,
       3899,
-      true
+      false
      ],
      [
       "PL",
@@ -22521,7 +22521,7 @@
       "NM",
       0,
       4499,
-      true
+      false
      ],
      [
       "PL",
@@ -23385,7 +23385,7 @@
       "NM",
       0,
       49,
-      true
+      false
      ],
      [
       "PL",
@@ -25089,7 +25089,7 @@
       "NM",
       0,
       1099,
-      true
+      false
      ],
      [
       "PL",
@@ -32444,7 +32444,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-09-26T13:46:53+00:00",
+ "generated_at": "2026-09-27T14:44:44+00:00",
  "product_url_template": "https://facetofacegames.com/products/{handle}",
  "retailer_id": "facetofacegames",
  "schema_version": 1
