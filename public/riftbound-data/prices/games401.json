@@ -1523,13 +1523,13 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
       1,
       60,
-      true
+      false
      ],
      [
       "MP",
@@ -2533,7 +2533,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -4631,7 +4631,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -6663,7 +6663,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -11849,7 +11849,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -11899,7 +11899,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -21385,7 +21385,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -24211,7 +24211,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -25089,7 +25089,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -26743,7 +26743,7 @@
       "NM",
       0,
       3100,
-      true
+      false
      ],
      [
       "SP",
@@ -30003,7 +30003,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -32403,7 +32403,7 @@
       "SP",
       1,
       280,
-      true
+      false
      ],
      [
       "MP",
@@ -32657,7 +32657,7 @@
       "NM",
       0,
       2830,
-      true
+      false
      ],
      [
       "SP",
@@ -35303,7 +35303,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -40027,7 +40027,7 @@
       "NM",
       0,
       25,
-      true
+      false
      ],
      [
       "SP",
@@ -40311,7 +40311,7 @@
       "NM",
       0,
       400,
-      true
+      false
      ],
      [
       "SP",
@@ -41434,19 +41434,19 @@
      [
       "NM",
       0,
-      10500,
+      9200,
       false
      ],
      [
       "SP",
       1,
-      8400,
+      7360,
       false
      ],
      [
       "MP",
       2,
-      6825,
+      5980,
       false
      ]
     ]
@@ -42338,7 +42338,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-10-01T16:31:43+00:00",
+ "generated_at": "2026-10-02T15:52:31+00:00",
  "product_url_template": "https://store.401games.ca/products/{handle}",
  "retailer_id": "games401",
  "schema_version": 1
