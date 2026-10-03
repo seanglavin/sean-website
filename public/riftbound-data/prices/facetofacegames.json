@@ -6607,7 +6607,7 @@
       "NM",
       0,
       349,
-      true
+      false
      ],
      [
       "PL",
@@ -7999,7 +7999,7 @@
       "NM",
       0,
       8999,
-      true
+      false
      ],
      [
       "PL",
@@ -10091,7 +10091,7 @@
       "NM",
       0,
       349,
-      true
+      false
      ],
      [
       "PL",
@@ -13363,7 +13363,7 @@
       "NM",
       0,
       49,
-      true
+      false
      ],
      [
       "PL",
@@ -15471,7 +15471,7 @@
       "NM",
       0,
       599,
-      true
+      false
      ],
      [
       "PL",
@@ -17825,7 +17825,7 @@
       "NM",
       0,
       9999,
-      true
+      false
      ],
      [
       "PL",
@@ -21029,7 +21029,7 @@
       "NM",
       0,
       799,
-      true
+      false
      ],
      [
       "PL",
@@ -21219,7 +21219,7 @@
       "NM",
       0,
       1199,
-      true
+      false
      ],
      [
       "PL",
@@ -22401,7 +22401,7 @@
       "NM",
       0,
       399,
-      true
+      false
      ],
      [
       "PL",
@@ -22887,7 +22887,7 @@
       "NM",
       0,
       149,
-      true
+      false
      ],
      [
       "PL",
@@ -30119,7 +30119,7 @@
       "NM",
       0,
       199,
-      true
+      false
      ],
      [
       "PL",
@@ -32444,7 +32444,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-10-02T15:52:28+00:00",
+ "generated_at": "2026-10-03T14:20:35+00:00",
  "product_url_template": "https://facetofacegames.com/products/{handle}",
  "retailer_id": "facetofacegames",
  "schema_version": 1
