@@ -11,7 +11,7 @@
    "VEN"
   ]
  },
- "generated_at": "2026-10-18T13:21:59+00:00",
+ "generated_at": "2026-10-19T16:31:58+00:00",
  "retailers": [
   {
    "cards_covered": 1164,
@@ -40,7 +40,7 @@
   {
    "cards_covered": 1165,
    "currency": "CAD",
-   "error": "Client error '429 Too Many Requests' for url 'https://tapsgames.com/collections/riftbound-singles/products.json?limit=250&page=2'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+   "error": "Client error '429 Too Many Requests' for url 'https://tapsgames.com/collections/riftbound-singles/products.json?limit=250&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
    "file": "prices/tapsgames.json",
    "generated_at": "2026-10-07T16:38:21+00:00",
    "id": "tapsgames",
