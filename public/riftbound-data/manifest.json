@@ -11,25 +11,24 @@
    "VEN"
   ]
  },
- "generated_at": "2026-11-01T16:07:29+00:00",
+ "generated_at": "2026-11-02T19:35:51+00:00",
  "retailers": [
   {
    "cards_covered": 1164,
    "currency": "CAD",
-   "error": "Client error '429 Too Many Requests' for url 'https://facetofacegames.com/collections/riftbound-singles/products.json?limit=250&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
    "file": "prices/facetofacegames.json",
-   "generated_at": "2026-10-29T16:14:41+00:00",
+   "generated_at": "2026-11-02T19:35:41+00:00",
    "id": "facetofacegames",
    "listing_count": 3346,
    "name": "Face to Face Games",
    "site_url": "https://facetofacegames.com",
-   "status": "error"
+   "status": "ok"
   },
   {
    "cards_covered": 1164,
    "currency": "CAD",
    "file": "prices/games401.json",
-   "generated_at": "2026-11-01T16:07:29+00:00",
+   "generated_at": "2026-11-02T19:35:46+00:00",
    "id": "games401",
    "listing_count": 5001,
    "name": "401 Games",
@@ -39,14 +38,13 @@
   {
    "cards_covered": 1165,
    "currency": "CAD",
-   "error": "Client error '429 Too Many Requests' for url 'https://tapsgames.com/collections/riftbound-singles/products.json?limit=250&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
    "file": "prices/tapsgames.json",
-   "generated_at": "2026-10-30T16:00:41+00:00",
+   "generated_at": "2026-11-02T19:35:51+00:00",
    "id": "tapsgames",
    "listing_count": 8385,
    "name": "Taps Games",
    "site_url": "https://tapsgames.com",
-   "status": "error"
+   "status": "ok"
   }
  ],
  "schema_version": 1
