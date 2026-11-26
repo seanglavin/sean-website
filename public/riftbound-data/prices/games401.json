@@ -3375,7 +3375,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -4619,7 +4619,7 @@
       "MP",
       2,
       520,
-      true
+      false
      ]
     ]
    },
@@ -7127,7 +7127,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -8617,7 +8617,7 @@
       "NM",
       0,
       350,
-      true
+      false
      ],
      [
       "SP",
@@ -8695,7 +8695,7 @@
       "NM",
       0,
       3000,
-      true
+      false
      ],
      [
       "SP",
@@ -8721,7 +8721,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -9399,7 +9399,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -11119,7 +11119,7 @@
       "NM",
       0,
       2900,
-      true
+      false
      ],
      [
       "SP",
@@ -14857,13 +14857,13 @@
       "NM",
       0,
       300,
-      true
+      false
      ],
      [
       "SP",
       1,
       240,
-      false
+      true
      ],
      [
       "MP",
@@ -21001,7 +21001,7 @@
       "NM",
       0,
       50,
-      true
+      false
      ],
      [
       "SP",
@@ -21385,7 +21385,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -21541,7 +21541,7 @@
       "NM",
       0,
       100,
-      true
+      false
      ],
      [
       "SP",
@@ -23435,7 +23435,7 @@
       "NM",
       0,
       8000,
-      true
+      false
      ],
      [
       "SP",
@@ -37301,7 +37301,7 @@
       "NM",
       0,
       250,
-      true
+      false
      ],
      [
       "SP",
@@ -39299,7 +39299,7 @@
       "NM",
       0,
       150,
-      true
+      false
      ],
      [
       "SP",
@@ -40285,7 +40285,7 @@
       "NM",
       0,
       75,
-      true
+      false
      ],
      [
       "SP",
@@ -42338,7 +42338,7 @@
   ]
  },
  "currency": "CAD",
- "generated_at": "2026-11-25T19:25:26+00:00",
+ "generated_at": "2026-11-26T19:08:01+00:00",
  "product_url_template": "https://store.401games.ca/products/{handle}",
  "retailer_id": "games401",
  "schema_version": 1
